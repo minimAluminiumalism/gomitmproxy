@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/AdguardTeam/golibs/log"
-	"github.com/AdguardTeam/gomitmproxy/proxyutil"
+	"github.com/minimAluminiumalism/gomitmproxy/proxyutil"
 	"github.com/pkg/errors"
 )
 
@@ -278,6 +278,9 @@ func (p *Proxy) handleRequest(ctx *Context) error {
 		if session.req.Method == http.MethodConnect {
 			return p.handleConnect(session)
 		}
+
+		// Config req header
+		headerConfig(session)
 
 		// not a CONNECT request, processing a plain HTTP request.
 		// res body is closed below (see session.res.body.Close()).

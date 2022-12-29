@@ -7,7 +7,7 @@ import (
 	"syscall"
 
 	"github.com/AdguardTeam/golibs/log"
-	"github.com/AdguardTeam/gomitmproxy"
+	"github.com/minimAluminiumalism/gomitmproxy"
 )
 
 func main() {
